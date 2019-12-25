@@ -1,0 +1,1921 @@
+/*
+    DEMO STYLE
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #fafafa;
+    margin: 0px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+#sidebar a,
+#sidebar a:hover,
+#sidebara:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.navbar-btn.active {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+    float: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+i,
+span {
+    display: inline-block;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 18%;
+    background-color: #26304F;
+    color: #fff;
+    transition: all 0.3s;
+    position: fixed;
+    height: 100%;
+    z-index: 111;
+}
+
+
+#sidebar.closed {
+    min-width: 4%;
+    max-width: 80px;
+    text-align: center;
+    z-index: 111;
+}
+
+#sidebar.closed .sidebar-header h3,
+#sidebar.closed .CTAs {
+    display: none;
+}
+
+#sidebar.closed .sidebar-header strong {
+    display: block;
+}
+
+#sidebar ul li a {
+    text-align: left;
+}
+
+#sidebar.closed ul li a {
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+#sidebar.closed ul li a i {
+    margin-right: 0;
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+#sidebar.closed ul ul a {
+    padding: 10px !important;
+}
+
+#sidebar.closed .dropdown-toggle::after {
+    top: auto;
+    bottom: 10px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+    color: #4695d5;
+}
+
+#sidebar .sidebar-header {
+    padding: 10px 15px;
+    background: #2A56C6;
+}
+
+#sidebar .sidebar-header strong {
+    display: none;
+    font-size: 1.8em;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul li a {
+    padding: 15px;
+    font-size: 18px;
+    display: block;
+}
+
+.dropdownMenu li a:hover {
+    color: #808BA8;
+}
+
+.dropdownMenu li a:focus {
+    color: #808BA8;
+    border-left: 7px solid #2A56C6;
+    background-color: #1E2740;
+}
+
+#sidebar ul li a i {
+    margin-right: 10px;
+}
+
+#sidebar ul li.closed > a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: initial;
+
+}
+
+.menulist a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.menulist .dropdown-toggle::after {
+    content: none;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    background-image: url(../Assets/Shape.png);
+}
+
+#sidebar ul ul a {
+    font-size: 16px !important;
+    padding-left: 30px !important;
+    background: #161D31;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+#sidebar .logo {
+    display: block;
+}
+
+#sidebar .logoClosed {
+    display: none;
+}
+
+#sidebar.closed .logo {
+    display: none;
+}
+
+#sidebar.closed .logoClosed {
+    display: block;
+}
+
+#sidebar.closed .left-sidebar-header {
+    display: none;
+}
+
+#sidebar.closed .sidebar-header {
+    padding: 10px 0px;
+}
+
+.left-sidebar-header {
+    color: #ffffff;
+    padding-left: 15px;
+    white-space: nowrap;
+}
+
+a:hover .left-sidebar-header {
+    color: #9B9B9B;
+}
+
+a:focus .left-sidebar-header {
+    color: #ffffff;
+}
+
+a[aria-expanded="true"] .down-arrow {
+    display: none;
+}
+
+a[aria-expanded="true"] .up-arrow {
+    display: block;
+}
+
+a[aria-expanded="false"] .up-arrow {
+    display: none;
+}
+
+a[aria-expanded="false"] .down-arrow {
+    display: block;
+}
+
+#sidebar.closed a .down-arrow {
+    display: none;
+}
+
+#sidebar.closed a .up-arrow {
+    display: none;
+}
+
+#sidebar.closed .svg-inline--fa {
+    height: 2em;
+    width: 2em;
+}
+
+#sidebarCollapse {
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    padding-left: 25px;
+}
+
+#sidebarCollapse .toggleButton {
+    background: url('../Assets/arrow_right-16.png') no-repeat center;
+    width: 25px;
+    height: 20px;
+}
+
+#sidebarCollapse .toggleButton.closed {
+    background: url('../Assets/arrow_Expand.png') no-repeat center;
+    width: 25px;
+    height: 20px;
+}
+
+#sidebar.closed ul > li > a > .img-icon {
+    margin: 0 auto;
+}
+
+.menulist {
+    position: relative;
+}
+
+#sidebar.closed .menulist:hover > .dropdownMenu {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 100%;
+    width: auto;
+    z-index: 90;
+}
+
+#sidebar.closed .menulist:hover > .dropdownMenu li a {
+    padding: 10px 35px !important;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    min-width: 82%;
+    min-height: 100vh;
+    transition: all 0.3s;
+    margin-left: 18%;
+}
+
+#contentDetails {
+    min-width: 82%;
+    min-height: 100vh;
+    transition: all 0.3s;
+    margin-left: 18%;
+    padding-bottom: 15px;
+}
+
+#contentDetails.toggle {
+    min-width: 96%;
+    min-height: 100vh;
+    transition: all 0.3s;
+    margin-left: 4%;
+}
+
+#content.toggle {
+    min-width: 96%;
+    min-height: 100vh;
+    transition: all 0.3s;
+    margin-left: 4%;
+}
+
+/* ---------------------------------------------------
+    TopNav
+----------------------------------------------------- */
+.topNav {
+    height: 80px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    position: fixed;
+    min-width: 82%;
+    z-index: 50;
+}
+
+.topNav.toggle {
+    height: 80px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    position: fixed;
+    min-width: 96%;
+}
+
+.topNavContent {
+    height: 100%;
+}
+
+.rightNavSection {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    position: relative;
+}
+
+.rightNavSection li {
+    float: right;
+    height: 100%;
+    overflow: hidden;
+}
+
+.rightNavSection .notificationIcon {
+    padding: 25px 17px 25px 25px;
+    padding: 25px;
+}
+
+.rightNavSection .notificationBell {
+    background: url('../Assets/notification_bell-5.png') no-repeat center;
+    width: 18px;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.notificationBell[data-badge]:after {
+    content: attr(data-badge);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: .7em;
+    background: #FF4D4D;
+    color: white;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 50%;
+    box-shadow: 0 0 1px #333;
+}
+
+.rightNavSection .profileImageIcon span {
+    padding: 13px;
+}
+
+.rightNavSection .userName span {
+    padding: 22px 22px 22px 0px;
+}
+
+.rightNavSection .optionDropdown {
+    padding: 30px 25px 0px 0px;
+}
+
+
+.rightNavSection .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #7A8792;
+    cursor: pointer;
+}
+
+.dropdownOptionsBody {
+    display: none;
+}
+
+.dropdownOptionsBody::before {
+    position: absolute;
+    top: -10px;
+    right: 60px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid #EBEBEB;
+}
+
+.dropdownOptionsBody {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.rightNavSection .dropdownOptions {
+    position: absolute;
+    top: 85%;
+    right: 2%;
+    height: auto;
+    z-index: 1;
+    overflow: visible;
+    border-radius: 5px;
+    background-color: #EBEBEB;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.dropdownOptionsBody li {
+    float: left;
+    width: 100%;
+    height: auto;
+    color: #7A8792;
+}
+
+.dropdownOptionsBody li a {
+    text-decoration: none;
+    color: #7A8792;
+}
+
+/* ---------------------------------------------------
+   Breadcrumbs
+----------------------------------------------------- */
+#content .breadcrumbsSection {
+    width: 95%;
+    height: 55px;
+    overflow: hidden;
+    margin-top: 100px;
+    position: relative;
+    margin-left: 30px;
+    background-color: #FAFAFA;
+}
+
+.breadcrumbsNav {
+    color: #7A8792;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.breadcrumbsSection .breadcrumbsNav a {
+    text-decoration: none;
+    color: #7A8792;
+}
+
+.breadcrumbsSection .breadcrumbsNav a:active,
+.breadcrumbsSection .breadcrumbsNav a:focus {
+    text-decoration: none;
+    color: #000000;
+}
+
+.breadcrumbsSection .optionsSection .downloadData {
+    text-decoration: none;
+    color: #7A8792;
+    padding-right: 12px;
+}
+
+.breadcrumbsSection .optionsSection .downloadData:active,
+.breadcrumbsSection .optionsSection .downloadData:focus {
+    text-decoration: none;
+    color: #000000;
+}
+
+.breadcrumbsSection .optionsSection {
+    overflow: hidden;
+    display: inline-block;
+    float: right;
+}
+
+.optionsSection .exportExcel {
+    padding-right: 8px;
+}
+
+.optionsSection .exportPdf {
+    padding-right: 25px;
+}
+
+.breadcrumbsSection .optionsSection .filterButton {
+    height: 38px;
+    width: 94px;
+    border-radius: 19px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    background-color: #2A56C6;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}
+
+#filterModalCenter #applyFilter {
+    height: 47px;
+    width: 94px;
+    border-radius: 28.5px;
+    background-color: #2A56C6;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}
+
+#filterModalCenter .filterOption {
+    width: calc(50% - 40px);
+    float: left;
+    list-style-type: none;
+    margin: 12px 20px;
+}
+
+#filterModalCenter .filterSection {
+    margin: 0;
+    padding: 0;
+}
+
+.filterOption .dropdownBox select {
+    height: 48px;
+    border: 1.5px solid #b4bdc1;
+}
+
+.filterOption .customDateField {
+    border: 1.5px solid #B4BDC1;
+    border-right-width: 0px;
+    height: 48px;
+    box-shadow: none;
+}
+
+.filterOption .docs-datepicker-trigger {
+    border: 1.5px solid #B4BDC1;
+    border-left-width: 0px;
+    border-left-color: white;
+    opacity: 1;
+    padding: 0 12px;
+}
+
+.modalLabel {
+    color: #646464;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+}
+
+#filterModalCenter .modal-body {
+    padding-bottom: .5rem;
+}
+
+#filterModalCenter .modal-footer {
+    border: none;
+    padding: 0px 35px 20px 35px;
+}
+
+/* ---------------------------------------------------
+    Data Table Section
+----------------------------------------------------- */
+#content .dataTableSection {
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 8px 0 rgba(205, 205, 205, 0.5);
+    border-radius: 4px;
+    position: relative;
+}
+
+#contentDetails .dataTableSection {
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 8px 0 rgba(205, 205, 205, 0.5);
+    border-radius: 4px;
+    position: relative;
+}
+
+#content table.dataTable tbody th,
+#content table.dataTable tbody td {
+    border: 1px solid #e8e8e894;
+    padding: 10px 10px 10px 20px;
+    text-align: left;
+}
+
+#example_length label select {
+    border-radius: 4px;
+}
+
+#example_filter input {
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #E8E8E8;
+}
+
+.dataTables_wrapper #example_filter input {
+    margin-right: 1.5em
+}
+
+#example_length label {
+    color: #808BA8;
+    margin: 20px;
+    vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
+}
+
+#example_filter label {
+    margin: 15px;
+}
+
+#example_filter label input {
+    background-image: url(../Assets/searchPlace.png);
+    background-position: 12px;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    width: 168px;
+    height: 36px;
+}
+
+
+#example thead tr th {
+    border: 1px solid #E8E8E8;
+    background-color: #FAFAFA;
+    padding: 20px;
+}
+
+#example thead .sorting_desc {
+    background-image: url(../Assets/highlight_down.png);
+    background-position: 95% 50%;
+}
+
+#example thead .sorting_asc {
+    background-image: url(../Assets/highlight_up-14.png);
+    background-position: 93% 50%;
+}
+
+#example thead .sorting {
+    background-image: url(../Assets/arrow_disabled.png);
+    background-position: 95% 50%;
+}
+
+#example tbody {
+    font-size: 14px;
+    text-align: center;
+}
+
+.dataTableSection .dataTable.no-footer {
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.status {
+    background-image: url(../Assets/likestatus.png);
+    background-repeat: no-repeat;
+    background-position: 25%;
+}
+
+.negativeStatus {
+    background-image: url(../Assets/dislike.png);
+    background-repeat: no-repeat;
+    background-position: 25%;
+}
+
+#example_wrapper #example_info {
+    font-variant-numeric: tabular-nums;
+    padding: 25px 20px;
+}
+
+#example_paginate {
+    float: left;
+    padding: 18px 0px;
+}
+
+#example_paginate .paginate_button {
+    padding: 0;
+    background-color: white !important;
+}
+
+#example_paginate .paginate_button:hover {
+    background: #ffffff !important;
+    border: 1px solid #ffffff;
+}
+
+#example tfoot {
+    display: none;
+}
+
+/* ---------------------------------------------------
+    AUDIT DETAILS PAGE
+----------------------------------------------------- */
+
+#contentDetails .breadcrumbsDetails {
+    color: #000;
+    font-family: Roboto;
+    font-size: 22px;
+    height: 100%;
+    padding: 15px 0px;
+}
+
+#contentDetails .breadcrumbsSection {
+    height: 65px;
+    overflow: hidden;
+    top: 0;
+    position: relative;
+    margin-left: 30px;
+    background-color: #FAFAFA;
+
+}
+
+#contentDetails .customDetail {
+    top: 80px;
+    min-width: 82%;
+    position: fixed;
+    z-index: 1;
+}
+
+#contentDetails .customDetail.toggle {
+    top: 80px;
+    width: 96%;
+    position: fixed;
+    z-index: 1;
+}
+
+#contentDetails .customProductDetails {
+    margin-top: 330px;
+}
+
+#contentDetails .detailTxt {
+    color: #7A8793;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    padding: 20px;
+}
+
+#contentDetails .collpsButn {
+    color: #7A8793;
+    padding: 8px 20px;
+    float: right;
+    cursor: pointer;
+}
+
+#contentDetails .collpsButn1 {
+    color: #7A8793;
+    padding: 8px 20px;
+    float: right;
+}
+
+#contentDetails .detailsSection {
+    margin: 0px auto;
+    width: 94%;
+}
+
+#contentDetails .detailNav {
+    border: 1px solid #E8E8E8;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#contentDetails .customBack {
+    background-color: #ffffff;
+    box-shadow: 0 3px 8px 0 rgba(205, 205, 205, 0.5);
+}
+
+#contentDetails #productDetails {
+    box-shadow: 0 3px 8px 0 rgba(205, 205, 205, 0.5);
+}
+
+#contentDetails .keyTxt {
+    color: #646464;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+#contentDetails .valuetxt {
+    color: #161719;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+#contentDetails #detailsTab {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+#contentDetails #detailsTab tr td {
+    padding: 10px 30px;
+}
+
+#contentDetails .mrgnTop {
+    margin-top: 20px;
+}
+
+#contentDetails span[aria-expanded="false"] .down-gryarrow {
+    display: none;
+}
+
+#contentDetails span[aria-expanded="false"] .up-gryarrow {
+    display: block;
+    padding-top: 5px;
+    cursor: pointer
+}
+
+#contentDetails span[aria-expanded="true"] .down-gryarrow {
+    display: block;
+    padding-top: 5px;
+    cursor: pointer
+}
+
+#contentDetails span[aria-expanded="true"] .up-gryarrow {
+    display: none;
+}
+
+#contentDetails .normalTxt {
+    color: #161719;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+#contentDetails .zeroVal {
+    color: #FF2424;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+#contentDetails .normlVal {
+    color: #161719;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+
+
+#contentDetails #auditImg .submitSection {
+    overflow: hidden;
+}
+
+#contentDetails #auditImg .imageRow {
+    margin: 15px 15px 0 15px;
+}
+
+#contentDetails .downButton,
+#contentDetails .submitSection .submitButton {
+    height: 38px;
+    width: 132px;
+    border-radius: 19px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    background-color: #2A56C6;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    margin-right: 15px;
+
+}
+
+#contentDetails .approveButton {
+    height: 38px;
+    width: 132px;
+    border-radius: 19px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    background-color: #BDC3D4;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    margin-right: 15px;
+}
+
+#contentDetails .imageTiles {
+    padding: 0;
+}
+
+#contentDetails .submitSection .submitButton {
+    float: right;
+    margin: 25px 40px 25px 0px;
+}
+
+#contentDetails .approveButton {
+    float: right;
+    margin: 25px 20px 25px 0px;
+}
+
+#contentDetails button:focus {
+    outline: 0px dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+}
+
+#contentDetails .tableCls {
+    width: 100%;
+}
+
+#contentDetails .tableCls tr td {
+    padding: 10px 30px;
+    border: 1px solid #E8E8E8;
+    background-color: #ffffff;
+}
+
+#contentDetails .tableCls th {
+    padding: 10px 30px;
+    border: 1px solid #E8E8E8;
+    background-color: #FAFAFA;
+}
+
+#contentDetails .headertxt {
+    color: #2A56C6;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.8px;
+    text-align: center;
+}
+
+#contentDetails .productName {
+    color: #646464;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    padding-left: 25px;
+}
+
+#contentDetails .align {
+    text-align: center;
+}
+
+#contentDetails .otherBtns {
+    height: 38px;
+    width: 73px;
+    border: 1px solid #2A56C6;
+    border-radius: 3px;
+    background-color: #F1F1F1;
+    color: #161719;
+    font-family: Roboto;
+    font-size: 14px;
+    padding: 10px 15px;
+    margin: 0px 5px;
+}
+
+#contentDetails .otherDwnBtns {
+    color: #161719;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 16px;
+    height: 35px;
+    border: 1.5px solid #2A56C6;
+    background-color: #fafafa;
+    border-radius: 19px;
+    margin: 0px 5px;
+    padding: 0px 20px;
+}
+
+#contentDetails a:hover {
+    color: #161719;
+    text-decoration: none;
+}
+
+#contentDetails .divHeight {
+    height: 50px;
+    padding: 0px 10px;
+}
+
+#contentDetails .imgTag {
+    width: 232px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.imgTag [type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[type=radio] + .correctIconImg {
+    height: 17px;
+    width: 17px;
+    background-image: url(../Assets/CorrectDeactive.png);
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+[type=radio]:checked + .correctIconImg {
+    height: 17px;
+    width: 17px;
+    background-image: url(../Assets/CorrectActive.png);
+    cursor: pointer;
+    margin: 0 6px;
+}
+
+[type=radio] + .wrongIconImg {
+    height: 17px;
+    width: 17px;
+    background-image: url(../Assets/WrongDeactive.png);
+    cursor: pointer;
+    margin: 0 6px;
+}
+
+[type=radio]:checked + .wrongIconImg {
+    height: 17px;
+    width: 17px;
+    background-image: url(../Assets/WrongActive.png);
+    cursor: pointer;
+    margin: 0 6px;
+}
+
+
+#contentDetails .auditImgTxt {
+    color: #161719;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    width: 70%;
+}
+
+#contentDetails .viewMore {
+    color: #4D86FF !important;
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 14px;
+    cursor: pointer;
+}
+
+#contentDetails .viewMoreBody {
+    display: none;
+    width: 300px;
+    height: auto;
+    background-color: #fafafa;
+    border: 1px solid grey;
+    border-radius: 5px;
+    position: absolute;
+    top: 45%;
+    padding-left: 10px;
+    overflow-x: auto;
+}
+
+#contentDetails .viewMoreContent {
+    display: table;
+    margin: 10px auto 0px;
+}
+
+#contentDetails .viewMoreBody img {
+    height: 60px;
+    width: 60px;
+}
+
+#contentDetails .imgMrgn {
+    margin-bottom: 10px;
+    height: 194px;
+    width: 232px;
+    border-radius: 5px;
+}
+
+#contentDetails .textMrgnTop {
+    margin-top: 10px;
+    float: right;
+
+}
+
+#contentDetails .auditSelct {
+    color: #808080;
+    width: 105px;
+    font-size: 12px;
+    border: 1px solid #808080;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+#contentDetails .auditStatus {
+    color: #808080;
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 14px;
+    margin-right: 85px;
+}
+
+#contentDetails .auditBrws {
+    color: #4D86FF;
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 14px;
+    cursor: pointer;
+}
+
+#contentDetails .custom-select:focus {
+    border-color: #000;
+    outline: 0;
+    box-shadow: 0 0 0 0.0rem rgba(0, 123, 255, .25);
+}
+
+#contentDetails .auditTxtArea {
+    height: 48px;
+    width: 232px;
+    border: 1px solid #808080;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+#contentDetails .imageSection {
+    border-bottom: 1px solid #E8E8E8;
+    position: relative;
+}
+
+.fileupload {
+    display: none;
+}
+
+.documentName {
+    height: 26px;
+    width: 120px;
+    float: right;
+    border: 1px solid #4A90E2;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(218, 210, 210, 0.5);
+    position: relative;
+    background: url(../Assets/attachment_icon.png) no-repeat;
+    background-position: 8px 6px;
+    color: #4A90E2;
+    font-family: Lato;
+    font-size: 11px;
+    text-align: center;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-left: 25px;
+    display: none;
+    margin-left: 15px;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+.docName {
+    max-height: 17px;
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.docNameClose {
+    display: inline-block;
+    height: 9px;
+    width: 9px;
+    float: right;
+    margin-top: 4px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+}
+
+.fileuploadTrigger {
+    height: 35px;
+    width: 90px;
+    background-color: #2A56C6;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 13px;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.lightbox {
+    top: 15% !important;
+}
+
+/*-------------------------------------------------*/
+/*Auditreport detail*/
+/*----------------------------------------------------*/
+
+/* Hide the browser's default checkbox */
+.checkboxLabels input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    left: 0;
+}
+
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    height: 25px;
+    width: 25px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.checkboxLabels input:checked ~ .checkmark {
+    background-color: #ffffff;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.checkboxLabels input:checked ~ .checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.checkboxLabels .checkmark:after {
+    left: 9px;
+    top: 4px;
+    width: 8px;
+    height: 13px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#example th,
+#example td {
+    position: relative;
+}
+
+.activeApprove {
+    height: 38px;
+    width: 132px;
+    border-radius: 19px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    background-color: #2A56C6;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+    outline: none;
+}
+
+.auditReportDetail .filterSelect {
+    height: 40px;
+    width: 135px;
+    border: 1px solid #B4BDC1;
+    border-radius: 4px;
+}
+
+.auditReportDetail #example_length label {
+    vertical-align: middle;
+}
+
+/*-------------------login page--------------*/
+/* CSS */
+
+html,
+body {
+    height: 100%;
+}
+
+.landing {
+    width: 100%;
+    height: 100%;
+    background: url('../Assets/loginBack.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.8;
+
+}
+
+.loginbox {
+    height: 420px;
+    width: 440px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.09);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.box {
+    height: 80%;
+    width: 70%;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+}
+
+.username {
+    height: 25px;
+    margin-top: 66px;
+}
+
+.name,
+.pwd {
+    width: 100%;
+    font-family: Roboto;
+    font-size: 20px;
+    border: none;
+    margin-left: 30px;
+    border-bottom: 1px solid #EFEFEF;
+    color: #4D4D4D;
+    line-height: 24px;
+    outline: none;
+}
+
+.profile {
+    height: 20px;
+    width: 20px;
+    background: url(../Assets/profile-4.png) no-repeat left;
+    background-size: cover;
+    position: absolute;
+    margin-top: 2px;
+}
+
+.password {
+    height: 27px;
+    margin-top: 42px;
+
+}
+
+.pswrdicon {
+    height: 20px;
+    width: 20px;
+    background: url(../Assets/shopping_bag-4.png) no-repeat left;
+    background-size: cover;
+    position: absolute;
+}
+
+.loginbtn {
+    border-radius: 22.5px;
+    background-color: #2A56C6;
+    margin-top: 50px;
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.forgot {
+    height: 19px;
+    min-width: 122px;
+    color: #999999;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    margin-top: 8px;
+    text-decoration-color: #999999;
+}
+
+
+/*--------------------psp segement style starts-----------------------------------*/
+#PSPDatatable_length label select {
+    border-radius: 4px;
+}
+
+#PSPDatatable_filter input {
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #E8E8E8;
+}
+
+.dataTables_wrapper #PSPDatatable_filter input {
+    margin-right: 1.5em
+}
+
+#PSPDatatable_length label {
+    color: #808BA8;
+    margin: 20px;
+    vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
+}
+
+#PSPDatatable_filter label {
+    margin: 15px;
+}
+
+#PSPDatatable_filter label input {
+    background-image: url(../Assets/searchPlace.png);
+    background-position: 12px;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    width: 168px;
+    height: 36px;
+}
+
+
+#PSPDatatable thead tr th {
+    border: 1px solid #E8E8E8;
+    background-color: #FAFAFA;
+    padding: 20px;
+}
+
+#PSPDatatable thead .sorting_desc {
+    background-image: url(../Assets/highlight_down.png);
+    background-position: 95% 50%;
+}
+
+#PSPDatatable thead .sorting_asc {
+    background-image: url(../Assets/highlight_up-14.png);
+    background-position: 93% 50%;
+}
+
+#PSPDatatable thead .sorting {
+    background-image: url(../Assets/arrow_disabled.png);
+    background-position: 95% 50%;
+}
+
+#PSPDatatable tbody {
+    font-size: 14px;
+    text-align: center;
+}
+
+#PSPDatatable_wrapper #PSPDatatable_info {
+    font-variant-numeric: tabular-nums;
+    padding: 25px 20px;
+}
+
+#PSPDatatable_paginate {
+    float: left;
+    padding: 18px 0px;
+}
+
+#PSPDatatable_paginate .paginate_button {
+    padding: 0;
+    background-color: white !important;
+}
+
+#PSPDatatable_paginate .paginate_button:hover {
+    background: #ffffff !important;
+    border: 1px solid #ffffff;
+}
+
+#PSPDatatable tfoot {
+    display: none;
+}
+
+#PSPDatatable th,
+#PSPDatatable td {
+    position: relative;
+}
+
+#PSPDatatable_length label {
+    vertical-align: middle;
+}
+
+.pspDetails {
+    margin-top: 450px !important;
+}
+
+.largeModal {
+    max-width: 815px;
+}
+
+#filterModalCenter .pspModal {
+    width: calc(33.33% - 40px);
+}
+
+.customModalLabel {
+    color: #646464;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    padding: 10px 10px 0 0px;
+    width: 80%;
+
+}
+
+#contentDetails .PspTable th {
+    padding: 20px 25px;
+    border: 1px solid #E8E8E8;
+    background-color: #FAFAFA;
+    color: #646464;
+}
+
+#contentDetails .PspTable tr td {
+    padding: 20px 30px;
+    border: 1px solid #E8E8E8;
+    background-color: #ffffff;
+    color: #161719;
+    font-size: 14px;
+}
+
+#contentDetails .PspTable .FlaggedHigh td {
+    background-color: #FFDADA;
+}
+
+/*psp segement style ends*/
+
+/*psp segement style ends*/
+
+
+/*---------------------master segment css----------------------*/
+#masterUserTable_length label select {
+    border-radius: 4px;
+}
+
+#masterUserTable_filter input {
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #E8E8E8;
+}
+
+.dataTables_wrapper #masterUserTable_filter input {
+    margin-right: 1.5em
+}
+
+#masterUserTable_length label {
+    color: #808BA8;
+    margin: 20px;
+    vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
+}
+
+#masterUserTable_filter label {
+    margin: 15px;
+}
+
+#masterUserTable_filter label input {
+    background-image: url(../Assets/searchPlace.png);
+    background-position: 12px;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    width: 168px;
+    height: 36px;
+}
+
+
+#masterUserTable thead tr th {
+    border: 1px solid #E8E8E8;
+    background-color: #FAFAFA;
+    padding: 20px;
+}
+
+#masterUserTable thead .sorting_desc {
+    background-image: url(../Assets/highlight_down.png);
+    background-position: 95% 50%;
+}
+
+#masterUserTable thead .sorting_asc {
+    background-image: url(../Assets/highlight_up-14.png);
+    background-position: 93% 50%;
+}
+
+#masterUserTable thead .sorting {
+    background-image: url(../Assets/arrow_disabled.png);
+    background-position: 95% 50%;
+}
+
+#masterUserTable tbody {
+    font-size: 14px;
+    text-align: center;
+}
+
+#masterUserTable_wrapper #masterUserTable_info {
+    font-variant-numeric: tabular-nums;
+    padding: 25px 20px;
+}
+
+#masterUserTable_paginate {
+    float: left;
+    padding: 18px 0px;
+}
+
+#masterUserTable_paginate .paginate_button {
+    padding: 0;
+    background-color: white !important;
+}
+
+#masterUserTable_paginate .paginate_button:hover {
+    background: #ffffff !important;
+    border: 1px solid #ffffff;
+}
+
+#masterUserTable tfoot {
+    display: none;
+}
+
+#masterUserTable th,
+#masterUserTable td {
+    position: relative;
+}
+
+#masterUserTable_length label {
+    vertical-align: middle;
+}
+
+
+.breadcrumbsSection .optionsSection .createButton {
+    height: 38px;
+    width: 94px;
+    border-radius: 19px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    background-color: #2A56C6;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}
+
+
+#createModalCenter #applyUpdate {
+    height: 47px;
+    width: 94px;
+    border-radius: 28.5px;
+    background-color: #2A56C6;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}
+
+#createModalCenter .createOption {
+    width: 100%;
+    float: left;
+    list-style-type: none;
+    margin: 5px 0px;
+}
+
+#createModalCenter .createSection {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.createOption .dropdownBox select,
+.createOption .dropdownBox input {
+    height: 48px;
+    border: 1.5px solid #b4bdc1;
+    border-radius: 4px !important;
+}
+
+.createOption .customDateField {
+    border: 1.5px solid #B4BDC1;
+    border-right-width: 0px;
+    height: 48px;
+    box-shadow: none;
+}
+
+.createOption .docs-datepicker-trigger {
+    border: 1.5px solid #B4BDC1;
+    border-left-width: 0px;
+    border-left-color: white;
+    opacity: 1;
+    padding: 0 12px;
+}
+
+
+.modalLabelRight {
+    color: #646464;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    padding: 10px 10px 0 25px;
+    width: 30%;
+    text-align: right;
+
+}
+
+
+#createModalCenter .modal-dialog {
+    max-width: 685px;
+
+}
+
+#createModalCenter .modal-body {
+    padding-bottom: .5rem;
+    padding-right: 45px;
+    padding-top: 80px;
+}
+
+#createModalCenter .modal-footer {
+    border: none;
+    padding: 0px 35px 20px 35px;
+}
+
+.modal-body .userSelection {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 50%;
+    position: relative;
+}
+
+.modal-body .activeSelection {
+    overflow: hidden;
+    margin-left: 30%;
+    width: 50%;
+    position: relative;
+}
+
+.userSelection .container {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-family: Roboto;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 50%;
+    float: left;
+    color: #646464;
+}
+
+.activeSelection .container {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-family: Roboto;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 35%;
+    float: left;
+    color: #646464;
+}
+
+/* Hide the browser's default radio button */
+.userSelection .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.activeSelection .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* Create a custom radio button */
+.userSelection .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.activeSelection .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.userSelection .container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.activeSelection .container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.userSelection .container input:checked ~ .checkmark {
+    background-color: #2A56C6;
+}
+
+.activeSelection .container input:checked ~ .checkmark {
+    background-color: #2A56C6;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.userSelection .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.activeSelection .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.userSelection .container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.activeSelection .container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.userSelection .container .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.activeSelection .container .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.mobileAppend {
+    background: #ffffff;
+    color: #DBDBDB;
+}
+
+#mobile {
+    display: none;
+}

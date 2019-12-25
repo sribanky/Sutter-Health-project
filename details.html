@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Premium Audit App Detalis</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+    <link href="css/datepicker.css" rel="stylesheet">
+    <link href="css/lightbox.min.css" rel="stylesheet">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome JS -->
+    <link href="css/font.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <span class="logo"><img src="Assets/logo.png"></span>
+                <span class="logoClosed"><img src="Assets/logo-closed.png"></span>
+            </div>
+            <ul class="drp list-unstyled components">
+                <li class="menulist">
+                    <a href="#auditSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <span class="img-icon"><img src="Assets/search_left.png"><span class="left-sidebar-header">Audit List</span></span>
+                        <span class="down-arrow float-right"><img src="Assets/Shape.png"></span>
+                        <span class="up-arrow float-right"><img src="Assets/Shape-open.png"></span>
+                    </a>
+                    <ul class="dropdownMenu collapse list-unstyled" id="auditSubmenu">
+                        <li>
+                            <a href="#">Audit List</a>
+                        </li>
+                        <li>
+                            <a href="#">Audit Report</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menulist">
+                    <a href="#masterSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <span class="img-icon"><img src="Assets/profile_round.png"><span class="left-sidebar-header">Master</span></span>
+                        <span class="down-arrow float-right"><img src="Assets/Shape.png"></span>
+                        <span class="up-arrow float-right"><img src="Assets/Shape-open.png"></span>
+                    </a>
+                    <ul class="dropdownMenu collapse list-unstyled" id="masterSubmenu">
+                        <li>
+                            <a href="#">Master List</a>
+                        </li>
+                        <li>
+                            <a href="#">Master Report</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menulist">
+                    <a href="#registerSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <span class="img-icon"><img src="Assets/edit.png"><span class="left-sidebar-header">Registration</span></span>
+                        <span class="down-arrow float-right"><img src="Assets/Shape.png"></span>
+                        <span class="up-arrow float-right"><img src="Assets/Shape-open.png"></span>
+                    </a>
+                    <ul class="dropdownMenu collapse list-unstyled" id="registerSubmenu">
+                        <li>
+                            <a href="#">Registration</a>
+                        </li>
+                        <li>
+                            <a href="#">Report</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content  -->
+        <div id="contentDetails">
+            <nav class="topNav">
+                <div class="topNavContent wrapper">
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span class="toggleButton"></span>
+                    </button>
+                    <ul class="rightNavSection">
+                        <li class="dropdownOptions">
+                            <ul class="dropdownOptionsBody">
+                                <li><a href="javascript:void(0)">Change Password</a></li>
+                                <li><a href="javascript:void(0)">Logout</a></li>
+                            </ul>
+                        </li>
+                        <li class="optionDropdown">
+                            <div class="arrow-down"></div>
+                        </li>
+                        <li class="userName"><span>James Lewis</span></li>
+                        <li class="profileImageIcon"><span><img src="Assets/Profile_Pic.png" alt="profileImage"></span></li>
+                        <li class="notificationIcon"><span class="notificationBell" data-badge="4">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="customDetail">
+
+                <div class="breadcrumbsSection">
+                    <span class="breadcrumbsDetails">
+                        Audit Details
+                    </span>
+                </div>
+
+
+                <!-- details start -->
+                <div class="detailNav"><span class="detailTxt">Details</span>
+                    <!--
+                    <span class="collpsButn" data-toggle="collapse" data-target="#details" aria-expanded="true">
+                        <span class="down-gryarrow float-right"><img src="Assets/grayDownArrw.png"></span>
+                        <span class="up-gryarrow float-right"><img src="Assets/grayUpArrw.png"></span></span>
+-->
+                </div>
+                <div id="details" class="detailNav customBack collapse show">
+                    <table id="detailsTab">
+                        <tbody>
+                            <tr>
+                                <td><span class="keyTxt">Branch :</span><span class="valuetxt">Delhi</span></td>
+                                <td><span class="keyTxt">Audit Start Time :</span><span class="valuetxt">2019-02-28 12:10:00</span></td>
+                                <td><span class="keyTxt">Outlet Name :</span><span class="valuetxt">ABW Elegance Tower (Outlet Code: CPD39)</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="keyTxt">Zone :</span><span class="valuetxt">New Delhi</span></td>
+                                <td><span class="keyTxt">Audit End Time :</span><span class="valuetxt">2019-02-28 12:12:00</span></td>
+                                <td><span class="keyTxt">Maintenance Status :</span><span class="valuetxt">Well Maintained</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- details ends -->
+            <!-- Product details start -->
+            <div class="detailsSection">
+                <div class="customProductDetails">
+                    <div class="detailNav mrgnTop"><span class="detailTxt">Product Details</span>
+                        <span class="collpsButn">
+                            <button type="button" class="downButton">Download</button>
+                            <span data-toggle="collapse" data-target="#productDetails" aria-expanded="true">
+                                <span class="down-gryarrow float-right"><img src="Assets/grayDownArrw.png"></span>
+                                <span class="up-gryarrow float-right"><img src="Assets/grayUpArrw.png"></span></span>
+                        </span>
+                    </div>
+                    <div id="productDetails" class="detailNav collapse show">
+                        <table class="tableCls">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2"><span class="productName">Product Name</span></th>
+                                    <th colspan="4" class="align"><span class="headertxt">Number of packs</span></th>
+                                </tr>
+                                <th><span>(10/01/19)</span></th>
+                                <th><span>(23/01/19)</span></th>
+                                <th><span>(12/02/19)</span></th>
+                                <th><span>(28/02/19)</span></th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="normalTxt">Marlboro</span></td>
+                                    <td><span class="zeroVal">0</span></td>
+                                    <td><span class="zeroVal">0</span></td>
+                                    <td><span class="zeroVal">0</span></td>
+                                    <td><span class="normalTxt">CPD39</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="normalTxt">Insignia</span></td>
+                                    <td><span class="zeroVal">0</span></td>
+                                    <td><span class="normlVal">3</span></td>
+                                    <td><span class="normlVal">6</span></td>
+                                    <td><span class="normalTxt">CPD39</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="normalTxt">India Kings Rich Gold</span></td>
+                                    <td><span class="zeroVal">0</span></td>
+                                    <td><span class="normlVal">5</span></td>
+                                    <td><span class="normlVal">3</span></td>
+                                    <td><span class="normalTxt">CPD39</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="normalTxt">Classic Rich Taste</span></td>
+                                    <td><span class="zeroVal">0</span></td>
+                                    <td><span class="normlVal">2</span></td>
+                                    <td><span class="zeroVal">0</span></td>
+                                    <td><span class="normalTxt">CPD39</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <span class="detailTxt">Others</span>
+                        </div>
+                        <div class="divHeight">
+                            <a href="" class="otherBtns">Dunhill</a>
+                            <a href="" class="otherBtns">Esse</a>
+                            <a href="" class="otherBtns">Doral</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- product details ends -->
+                <!-- Audit Images-->
+
+                <div class="detailNav mrgnTop"><span class="detailTxt">Audit Images</span>
+                    <span class="collpsButn1">
+                        <button type="button" class="otherDwnBtns">Download All Images</button>
+                        <button type="button" class="otherDwnBtns">Download Incorrect Images</button>
+                        <span data-toggle="collapse" data-target="#auditImg" aria-expanded="true">
+                            <span class="down-gryarrow float-right"><img src="Assets/grayDownArrw.png"></span>
+                            <span class="up-gryarrow float-right"><img src="Assets/grayUpArrw.png"></span></span>
+                    </span>
+                </div>
+                <div id="auditImg" class="detailNav customBack collapse show">
+                    <div class="imageSection">
+                        <div class="row imageRow">
+                            <div class="col-md-3 col-lg-3 imageTiles">
+                                <div class="imgTag">
+                                    <a href="Assets/test.png" data-lightbox="image-1" data-title="My caption"> <img class="imgMrgn" src="Assets/auditImg1.png"></a>
+
+                                    <span class="auditImgTxt">Kiosk / Unit Picture* </span>
+
+                                    <label class="wrongIcon float-right">
+                                        <input type="radio" name="checkpoint" value="reject">
+                                        <span class="wrongIconImg"></span>
+                                    </label>
+                                    <label class="correctIcon float-right">
+                                        <input type="radio" name="checkpoint" value="approve">
+                                        <span class="correctIconImg"></span>
+                                    </label>
+                                    <div class="viewMoreSection"><a class="viewMore">View More</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 imageTiles">
+                                <div class="imgTag">
+                                    <img class="imgMrgn" src="Assets/auditImg2.png">
+                                    <span class="auditImgTxt">Brandboard picture* </span>
+                                    <div class="textMrgnTop">
+                                        <span class="auditStatus">Status:</span>
+                                        <span class="filterOption">
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select auditSelct">
+                                                    <option selected>In Progress</option>
+                                                    <option value="1">Completed</option>
+                                                </select>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div class="fileUploadSection"><label id="fileuploadTrigger" class="fileuploadTrigger" for="fileupload">Attach File</label><input id="fileupload" class="fileupload" type="file" name="attachment">
+                                            <div id="documentName" class="documentName">
+                                                <p id="docName" class="docName">Document Name.pdf</p>
+
+                                            </div>
+                                        </div>
+
+                                        <input type="text" placeholder="Work in Progress" class="auditTxtArea">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 imageTiles">
+                                <div class="imgTag">
+                                    <img class="imgMrgn" src="Assets/auditImg3.png">
+                                    <span class="auditImgTxt">Planogram Picture* </span>
+                                    <span class="correctActiveIcon float-right"></span>
+                                    <div class="fileUploadSection"><label id="fileuploadTrigger1" class="fileuploadTrigger" for="fileupload1">Attach File</label><input id="fileupload1" class="fileupload" type="file" name="attachment">
+                                        <div id="documentName1" class="documentName">
+                                            <p id="docName1" class="docName">Document Name.pdf</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 imageTiles">
+                                <div class="imgTag">
+                                    <img class="imgMrgn" src="Assets/auditImg4.png">
+                                    <span class="auditImgTxt">TV/LED picture </span>
+                                    <span class="correctActiveIcon float-right"></span>
+                                    <div class="textMrgnTop">
+                                        <span class="auditStatus">Status:</span>
+                                        <span class="filterOption">
+                                            <div class="input-group mb-3">
+                                                <select class="custom-select auditSelct">
+                                                    <option selected>Completed</option>
+                                                    <option value="1">In Progress</option>
+                                                </select>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <input type="text" class="auditTxtArea">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row imageRow">
+                            <div class="col-md-3 col-lg-3 imageTiles">
+                                <div class="imgTag">
+                                    <img class="imgMrgn" src="Assets/auditImg5.png">
+                                    <span class="auditImgTxt">Warning board Picture </span>
+                                    <span class="correctActiveIcon float-right"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-lg-3 imageTiles">
+                                <div class="imgTag">
+                                    <img class="imgMrgn" src="Assets/auditImg6.png">
+                                    <span class="auditImgTxt">Kiosk Operator Picture </span>
+                                    <span class="correctActiveIcon float-right"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-lg-3 imageTiles">
+                                <div class="imgTag">
+                                    <img class="imgMrgn" src="Assets/auditImg7.png">
+                                    <span class="auditImgTxt">Stock Picture </span>
+                                    <span class="correctActiveIcon float-right"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 imageTiles">
+                            </div>
+                        </div>
+                        <div class="viewMoreBody">
+                            <div class="viewMoreContent"> <a href="Assets/test.png" data-lightbox="image-2" data-title="My caption"> <img class="imgMrgn" src="Assets/auditImg1.png"></a>
+                                <a href="Assets/test.png" data-lightbox="image-2" data-title="My caption"> <img class="imgMrgn" src="Assets/auditImg2.png"></a>
+                                <a href="Assets/test.png" data-lightbox="image-2" data-title="My caption"> <img class="imgMrgn" src="Assets/auditImg3.png"></a>
+                                <a href="Assets/test.png" data-lightbox="image-2" data-title="My caption"> <img class="imgMrgn" src="Assets/auditImg4.png"></a>
+                                <a href="Assets/test.png" data-lightbox="image-2" data-title="My caption"> <img class="imgMrgn" src="Assets/auditImg5.png"></a></div>
+
+                        </div>
+                    </div>
+                    <div class="submitSection">
+
+                        <button type="button" class="submitButton">Submit</button>
+                        <button type="button" class="approveButton">Approve</button>
+                    </div>
+                </div>
+
+
+
+                <!-- Audit Images ends -->
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/datepicker.min.js"></script>
+    <!--    <script src="js/lightbox-plus-jquery.min.js"></script>-->
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'disableScrolling': true,
+            'positionFromTop': 50,
+            'maxWidth': 1050,
+            'maxHeight': 820,
+
+        });
+
+    </script>
+</body>
+
+</html>

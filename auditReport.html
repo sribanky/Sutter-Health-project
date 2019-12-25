@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Premium Audit App</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+    <link href="css/datepicker.css" rel="stylesheet">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome JS -->
+    <link href="css/font.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <span class="logo"><img src="Assets/logo.png"></span>
+                <span class="logoClosed"><img src="Assets/logo-closed.png"></span>
+            </div>
+            <ul class="drp list-unstyled components">
+                <li class="menulist">
+                    <a href="#auditSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <span class="img-icon"><img src="Assets/search_left.png"><span class="left-sidebar-header">Audit List</span></span>
+                        <span class="down-arrow float-right"><img src="Assets/Shape.png"></span>
+                        <span class="up-arrow float-right"><img src="Assets/Shape-open.png"></span>
+                    </a>
+                    <ul class="dropdownMenu collapse list-unstyled" id="auditSubmenu">
+                        <li>
+                            <a href="#">Audit List</a>
+                        </li>
+                        <li>
+                            <a href="#">Audit Report</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menulist">
+                    <a href="#masterSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <span class="img-icon"><img src="Assets/profile_round.png"><span class="left-sidebar-header">Master</span></span>
+                        <span class="down-arrow float-right"><img src="Assets/Shape.png"></span>
+                        <span class="up-arrow float-right"><img src="Assets/Shape-open.png"></span>
+                    </a>
+                    <ul class="dropdownMenu collapse list-unstyled" id="masterSubmenu">
+                        <li>
+                            <a href="#">Master List</a>
+                        </li>
+                        <li>
+                            <a href="#">Master Report</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menulist">
+                    <a href="#registerSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <span class="img-icon"><img src="Assets/edit.png"><span class="left-sidebar-header">Registration</span></span>
+                        <span class="down-arrow float-right"><img src="Assets/Shape.png"></span>
+                        <span class="up-arrow float-right"><img src="Assets/Shape-open.png"></span>
+                    </a>
+                    <ul class="dropdownMenu collapse list-unstyled" id="registerSubmenu">
+                        <li>
+                            <a href="#">Registration</a>
+                        </li>
+                        <li>
+                            <a href="#">Report</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content  -->
+        <div id="content">
+            <nav class="topNav">
+                <div class="topNavContent wrapper">
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span class="toggleButton"></span>
+                    </button>
+                    <ul class="rightNavSection">
+                        <li class="dropdownOptions">
+                            <ul class="dropdownOptionsBody">
+                                <li><a href="javascript:void(0)">Change Password</a></li>
+                                <li><a href="javascript:void(0)">Logout</a></li>
+                            </ul>
+                        </li>
+                        <li class="optionDropdown">
+                            <div class="arrow-down"></div>
+                        </li>
+                        <li class="userName"><span>James Lewis</span></li>
+                        <li class="profileImageIcon"><span><img src="Assets/Profile_Pic.png" alt="profileImage"></span></li>
+                        <li class="notificationIcon"><span class="notificationBell" data-badge="4">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="breadcrumbsSection">
+                <div class="breadcrumbsNav">
+                    <a href="javascript:void(0)">Home</a>/<a href="javascript:void(0)">Premium Audit</a>
+                </div>
+                <div class="optionsSection"> <a class="downloadData" href="javascript:void(0)">Download</a>
+                    <a class="exportExcel" href="javascript:void(0)"><img src="Assets/excel.png"></a>
+                    <a class="exportPdf" href="javascript:void(0)"><img src="Assets/pdf.png"></a>
+                    <button type="button" class="filterButton" data-toggle="modal" data-target="#filterModalCenter">Filter</button>
+                </div>
+            </div>
+            <div class="dataTableSection">
+                <table id="example" class="" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Branch</th>
+                            <th>Type</th>
+                            <th>No. Outlet</th>
+                            <th>Audited</th>
+                            <th>Issues</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bangalore</td>
+                            <td>Mall</td>
+                            <td>14</td>
+                            <td>10</td>
+                            <td>14 <a href="auditReportDetail.html">Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>Bangalore</td>
+                            <td>Mall</td>
+                            <td>14</td>
+                            <td>10</td>
+                            <td>14 <a href="#">Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>Bangalore</td>
+                            <td>Mall</td>
+                            <td>14</td>
+                            <td>10</td>
+                            <td>14 <a href="#">Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>Bangalore</td>
+                            <td>Mall</td>
+                            <td>14</td>
+                            <td>10</td>
+                            <td>14 <a href="#">Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>Bangalore</td>
+                            <td>Mall</td>
+                            <td>14</td>
+                            <td>10</td>
+                            <td>14 <a href="#">Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>Bangalore</td>
+                            <td>Mall</td>
+                            <td>14</td>
+                            <td>10</td>
+                            <td>14 <a href="#">Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>Bangalore</td>
+                            <td>Mall</td>
+                            <td>14</td>
+                            <td>10</td>
+                            <td>14 <a href="#">Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>Bangalore</td>
+                            <td>Mall</td>
+                            <td>14</td>
+                            <td>10</td>
+                            <td>14 <a href="#">Details</a></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="filterModalCenter" tabindex="-1" role="dialog" aria-labelledby="filterModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <ul class="filterSection">
+                                <li class="filterOption">
+                                    <label class="modalLabel">From Date</label>
+                                    <div class="docs-datepicker fromDate">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control docs-date customDateField" data-toggle="datepicker" name="date" placeholder="From date">
+                                            <div class="input-group-append">
+                                                <button type="button" class="btn btn-outline-secondary docs-datepicker-trigger" disabled="">
+                                                    <img class="dropdownCalender" src="Assets/calendar.png" aria-hidden="true">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="docs-datepicker-container"></div>
+                                    </div>
+                                </li>
+                                <li class="filterOption">
+                                    <label class="modalLabel">To Date</label>
+                                    <div class="docs-datepicker toDate">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control docs-date customDateField" data-toggle="datepicker" name="date" placeholder="date to">
+                                            <div class="input-group-append">
+                                                <button type="button" class="btn btn-outline-secondary docs-datepicker-trigger" disabled="">
+                                                    <img class="dropdownCalender" src="Assets/calendar.png" aria-hidden="true">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="docs-datepicker-container"></div>
+                                    </div>
+                                </li>
+                                <li class="filterOption">
+                                    <label class="modalLabel">Branch</label>
+                                    <div class="input-group mb-3 dropdownBox">
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>Select Branch</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="filterOption">
+                                    <label class="modalLabel">Zone</label>
+                                    <div class="input-group mb-3 dropdownBox">
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>Select Zone</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="filterOption">
+                                    <label class="modalLabel">Outlet Type</label>
+                                    <div class="input-group mb-3 dropdownBox">
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>Select Outlet Type</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="filterOption">
+                                    <label class="modalLabel">Status</label>
+                                    <div class="input-group mb-3 dropdownBox">
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>Select Status</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="applyFilter">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/datepicker.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
